@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import * as I from './Avatar.types'
+import * as I from './Avatar.interfaces'
 
 export const Avatar__Container = styled.div<I.Avatar__Container>`
   background-color: #d3d3d3;
@@ -13,5 +13,6 @@ export const Avatar__Container = styled.div<I.Avatar__Container>`
     display: block;
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 `
