@@ -61,7 +61,7 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({
   return (
     <>
       <SEO
-        canonical={`https://url/${slug}`}
+        canonical={`https://amazing-links.vercel.app/creator/${slug}`}
         description={`Checkout all the content from the creator ${creator.name}`}
         title={`Amazing Links | ${creator.name}`}
       />
