@@ -20,15 +20,16 @@ Also powered by ```typescript```.
 
 For productivity and clean code enhancement, those libs were used:
 
-- ```gql``` and ```GraphQLClient``` for querying the API.
-- ```eslint``` and ```prettier``` for clean code.
-- ```react-responsive``` for querying mobile/desktop sizes directly on JSX.
+- ```gql``` and ```GraphQLClient``` for querying the API
+- ```eslint``` and ```prettier``` for clean code
+- ```react-responsive``` for querying mobile/desktop sizes directly on JSX
 
 ### Features:
 
-- Fully typescript;
-- Deployed to Vercel;
-- Customizable SEO;
+- Fully typescript
+- API wrapped with union types when necessary
+- Deployed to Vercel
+- Customizable SEO
 - Google Analytics implemented and registering traffic!
 
 ### IMPORTANT:
@@ -36,7 +37,7 @@ For productivity and clean code enhancement, those libs were used:
 Below are instructions to run this application.<br />
 Please keep in mind that to fetch data from API, a GraphCMS token is required. If you need access, contact admin.
 
-- Open terminal/cmd on unzipped folder;
+- Open terminal/cmd on unzipped folder
 - Run: *yarn install* or *npm install*
 - Create a preview running: *yarn dev* or *npm run dev*
 
