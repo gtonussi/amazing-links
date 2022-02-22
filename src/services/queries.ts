@@ -29,4 +29,20 @@ export const queries = {
       }
     }
   `,
+  getAllCreatorPages: gql`
+    query {
+      pages {
+        id,
+        slug,
+        creator {
+          id,
+          name,
+          avatar {
+            id,
+            url
+          }
+        },
+      }
+    }
+  `
 }

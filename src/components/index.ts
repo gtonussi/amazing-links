@@ -1,4 +1,5 @@
 export * from './Avatar'
+export * from './CreatorCard'
 export * from './Link'
 export * from './Info'
 export * from './YTEmbeded'

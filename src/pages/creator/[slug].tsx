@@ -68,22 +68,22 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({
 
       <S.CreatorPage__Container>
         <S.CreatorPage__Content>
-          <Avatar
-            imageUrl={
-              creator.avatar.url
-                ? creator.avatar.url
-                : '/assets/images/default-no-avatar.png'
-            }
-            height={isMobile ? '90px' : '120px'}
-            width={isMobile ? '90px' : '120px'}
-          />
+          {creator && (
+            <>
+              <Avatar
+                imageUrl={creator.avatar?.url}
+                height={isMobile ? '90px' : '120px'}
+                width={isMobile ? '90px' : '120px'}
+              />
 
-          <Info
-            name={creator.name}
-            description={creator.bio}
-            textDirection="center"
-            margin={isMobile ? '1.25rem 0' : '1.75rem 0'}
-          />
+              <Info
+                name={creator.name}
+                description={creator.bio}
+                textDirection="center"
+                margin={isMobile ? '1.25rem 0' : '1.75rem 0'}
+              />
+            </>
+          )}
 
           {blocks &&
             blocks.map(block =>
