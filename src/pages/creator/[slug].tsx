@@ -1,7 +1,7 @@
 import { GraphQLClient } from 'graphql-request'
 import { useMediaQuery } from 'react-responsive'
 
-import { Avatar, Button, Info, YTEmbeded } from 'components'
+import { Avatar, Info, Link, YTEmbeded } from 'components'
 import { SEO } from 'containers'
 import { queries } from 'services'
 
@@ -36,6 +36,12 @@ export const getServerSideProps = async context => {
     console.log(err)
   }
 
+  if (!page) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       slug,
@@ -44,7 +50,10 @@ export const getServerSideProps = async context => {
   }
 }
 
-const CreatorPage: React.FC<I.CreatorPageProps> = ({ slug, page: {blocks, creator} }) => {
+const CreatorPage: React.FC<I.CreatorPageProps> = ({
+  slug,
+  page: { blocks, creator },
+}) => {
   const isMobile = useMediaQuery({
     query: '(max-width: 767px)',
   })
@@ -60,7 +69,11 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({ slug, page: {blocks, creato
       <S.CreatorPage__Container>
         <S.CreatorPage__Content>
           <Avatar
-            imageUrl={creator.avatar.url}
+            imageUrl={
+              creator.avatar.url
+                ? creator.avatar.url
+                : '/assets/images/default-no-avatar.png'
+            }
             height={isMobile ? '90px' : '120px'}
             width={isMobile ? '90px' : '120px'}
           />
@@ -72,19 +85,18 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({ slug, page: {blocks, creato
             margin={isMobile ? '1.25rem 0' : '1.75rem 0'}
           />
 
-          {
+          {blocks &&
             blocks.map(block =>
               block.__typename === 'Link' ? (
                 <S.CreatorPage__CTAWrapper key={block.id}>
-                  <Button copy={block.source} url={block.url} />
+                  <Link source={block.source} url={block.url} />
                 </S.CreatorPage__CTAWrapper>
               ) : (
                 <S.CreatorPage__CTAWrapper key={block.id}>
                   <YTEmbeded ytid={block.ytid} />
                 </S.CreatorPage__CTAWrapper>
               )
-            )
-          }
+            )}
         </S.CreatorPage__Content>
       </S.CreatorPage__Container>
     </>

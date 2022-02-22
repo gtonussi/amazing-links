@@ -2,9 +2,9 @@ import * as S from './Avatar.styles'
 import * as I from './Avatar.interfaces'
 
 export const Avatar: React.FC<I.AvatarProps> = ({
-  altText = 'Icon of a person',
+  altText,
   height,
-  imageUrl = '/assets/images/default-no-avatar.png',
+  imageUrl,
   width,
 }) => {
 

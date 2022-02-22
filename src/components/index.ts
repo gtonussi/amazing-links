@@ -1,4 +1,4 @@
 export * from './Avatar'
-export * from './Button'
+export * from './Link'
 export * from './Info'
 export * from './YTEmbeded'
