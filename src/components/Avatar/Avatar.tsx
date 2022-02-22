@@ -7,10 +7,9 @@ export const Avatar: React.FC<I.AvatarProps> = ({
   imageUrl = '/assets/images/default-no-avatar.png',
   width = '120px',
 }) => {
-
   return (
     <S.Avatar__Container height={height} width={width}>
-      <img alt={altText} src={imageUrl}/>
+      <img alt={altText} src={imageUrl} />
     </S.Avatar__Container>
   )
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CreatorPage__Container = styled.div`
-  background: #E5E5E5;
+  background: #e5e5e5;
   height: 100%;
   width: 100%;
 `

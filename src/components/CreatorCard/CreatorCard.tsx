@@ -8,7 +8,7 @@ import * as S from './CreatorCard.styles'
 
 export const CreatorCard: React.FC<I.CreatorCardProps> = ({
   creator,
-  slug
+  slug,
 }) => {
   const router = useRouter()
 
@@ -17,9 +17,7 @@ export const CreatorCard: React.FC<I.CreatorCardProps> = ({
   })
 
   return (
-    <S.CreatorCard__Container
-      onClick={() => router.push(`/creator/${slug}`)}
-    >
+    <S.CreatorCard__Container onClick={() => router.push(`/creator/${slug}`)}>
       <Avatar
         altText={`Picture of ${creator.name}`}
         imageUrl={creator.avatar?.url}
@@ -28,7 +26,9 @@ export const CreatorCard: React.FC<I.CreatorCardProps> = ({
       />
       <div>
         <h3>{creator.name}</h3>
-        <h4><strong>{`@${slug}`}</strong></h4>
+        <h4>
+          <strong>{`@${slug}`}</strong>
+        </h4>
       </div>
     </S.CreatorCard__Container>
   )

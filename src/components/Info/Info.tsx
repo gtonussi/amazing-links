@@ -1,7 +1,12 @@
 import * as I from './Info.interfaces'
 import * as S from './Info.styles'
 
-export const Info: React.FC<I.InfoProps> = ({ description, margin, name, textDirection }) => {
+export const Info: React.FC<I.InfoProps> = ({
+  description,
+  margin,
+  name,
+  textDirection,
+}) => {
   return (
     <>
       <S.Info__Container margin={margin} textDirection={textDirection}>

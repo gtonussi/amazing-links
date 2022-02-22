@@ -2,7 +2,12 @@ import Head from 'next/head'
 
 import * as I from './SEO.types'
 
-export const SEO: React.FC<I.SEOProps> = ({ title, description, canonical, ogImage = '/assets/images/default-no-avatar.png' }) => {
+export const SEO: React.FC<I.SEOProps> = ({
+  title,
+  description,
+  canonical,
+  ogImage = '/assets/images/default-no-avatar.png',
+}) => {
   return (
     <Head>
       <link rel="canonical" href={canonical} />
