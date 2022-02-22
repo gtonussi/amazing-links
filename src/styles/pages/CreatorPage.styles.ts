@@ -28,3 +28,7 @@ export const CreatorPage__CTAWrapper = styled.article`
     margin-top: 1.25rem;
   }
 `
+
+export const CreatorPage__BreadcrumbWrapper = styled.section`
+  margin-bottom: 2rem;
+`

@@ -1,7 +1,7 @@
 import { GraphQLClient } from 'graphql-request'
 import { useMediaQuery } from 'react-responsive'
 
-import { Avatar, Info, Link, YTEmbeded } from 'components'
+import { Avatar, Breadcrumb, Info, Link, YTEmbeded } from 'components'
 import { SEO } from 'containers'
 import { queries } from 'services'
 
@@ -71,6 +71,10 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({
         <S.CreatorPage__Content>
           {creator && (
             <>
+              <S.CreatorPage__BreadcrumbWrapper>
+                <Breadcrumb creator={creator.name} />
+              </S.CreatorPage__BreadcrumbWrapper>
+
               <Avatar
                 imageUrl={creator.avatar?.url}
                 height={isMobile ? '90px' : '120px'}
