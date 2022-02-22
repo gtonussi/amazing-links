@@ -28,7 +28,8 @@ export const CreatorCard: React.FC<I.CreatorCardProps> = ({
       />
       <div>
         <h3>{creator.name}</h3>
-        <h4><strong>{`@${slug}`}</strong></h4>
+        <h4>
+          <strong>{`@${slug}`}</strong></h4>
       </div>
     </S.CreatorCard__Container>
   )
