@@ -12,8 +12,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
 
   useEffect(() => {
-    //https://willianjusten.com.br/como-configurar-o-google-analytics-no-nextjs-em-2021
-
     const handleRouteChange = url => {
       gtag.pageview(url)
     }

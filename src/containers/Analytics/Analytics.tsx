@@ -1,3 +1,5 @@
+//https://willianjusten.com.br/como-configurar-o-google-analytics-no-nextjs-em-2021
+
 import Script from 'next/script'
 import { GA_TRACKING_ID } from 'services/gtag'
 
