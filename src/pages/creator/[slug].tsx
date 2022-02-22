@@ -64,6 +64,7 @@ const CreatorPage: React.FC<I.CreatorPageProps> = ({
         canonical={`https://amazing-links.vercel.app/creator/${slug}`}
         description={`Checkout all the content from the creator ${creator.name}`}
         title={`Amazing Links | ${creator.name}`}
+        ogImage={creator.avatar?.url}
       />
 
       <S.CreatorPage__Container>
